@@ -47,7 +47,7 @@ const data = {
         },
         {
           title: "Installation",
-          url: "#installation",
+          url: "installation",
         },
         {
           title: "Theming",
