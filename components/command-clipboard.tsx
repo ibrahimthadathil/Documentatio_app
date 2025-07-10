@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "sonner"
 import { useCommandClipboard } from "./command-clipboard-provider"
+import { useTheme } from "next-themes"
 
 interface CommandStep {
   id: string
@@ -59,6 +60,7 @@ const commandSteps: CommandStep[] = [
 export function CommandClipboard() {
   const { isExpanded, toggleExpanded } = useCommandClipboard()
   const [copiedSteps, setCopiedSteps] = useState<Set<string>>(new Set())
+  const { theme } = useTheme()
 
   const copyToClipboard = async (command: string, stepId: string) => {
     try {
@@ -134,8 +136,8 @@ export function CommandClipboard() {
                   )}
 
                   <div className="relative group">
-                    <div className="flex items-center justify-between bg-zinc-950 dark:bg-zinc-900 rounded-lg p-3 border">
-                      <code className="text-sm font-mono text-zinc-100 flex-1 pr-2 break-all">{step.command}</code>
+                    <div className={`flex items-center justify-between ${theme==='dark'? "bg-zinc-950" : "bg-zinc-300" }  dark:bg-zinc-900 rounded-lg p-3 border`}>
+                      <code className={`"text-sm font-mono ${theme==='dark'?"":"text-zinc-700 bg-transparent"} flex-1 pr-2 break-all"`}>{step.command}</code>
                       <Button
                         variant="ghost"
                         size="icon"
