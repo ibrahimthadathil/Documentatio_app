@@ -165,7 +165,6 @@
 //   )
 // }
 
-
 "use client";
 
 import { useRef } from "react";
@@ -196,13 +195,27 @@ export function VideoPlayer({ title, description }: VideoPlayerProps) {
       {/* Video Wrapper */}
       <div className="relative group overflow-hidden rounded-lg bg-black shadow-2xl">
         {/* Iframe Video */}
-        <iframe
-          ref={iframeRef}
-          src="https://scribehow.com/embed/Windows_Service_Installation_via_Installer__5Z614v8bTTq2MXU__j-T6A?as=video"
-          allowFullScreen
-          className="w-full aspect-video border-0"
-          style={{ minHeight: "280px" }}
-        />
+        <div
+          style={{
+            height: "350px", // visible area height
+            overflow: "hidden", // crop outside
+            position: "relative",
+          }}
+          className="rounded-lg shadow-lg"
+        >
+          <iframe
+            src="https://scribehow.com/embed/Windows_Service_Installation_via_Installer__5Z614v8bTTq2MXU__j-T6A?as=video"
+            width="100%"
+            height="400" // full height including branding/footer
+            allowFullScreen
+            style={{
+              border: 0,
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          />
+        </div>
 
         {/* Fullscreen Control */}
         <div className="absolute bg-indigo-800 bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";

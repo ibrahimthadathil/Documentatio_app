@@ -18,33 +18,28 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
   const { isExpanded } = useCommandClipboard()
 
-  // useEffect(() => {
-  //   // Simulate page loading
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 1000)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [])
 
-  //   return () => clearTimeout(timer)
-  // }, [])
-
-  // if (isLoading) {
-  //   return null // PageLoader will handle the loading state
-  // }
+  if (isLoading) return null
 
   return (
     <>
+    
       <SidebarInset className={`transition-all duration-300 ease-in-out ${isExpanded ? "mr-80" : "mr-0"}`}>
         <ScrollIndicator />
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container max-w-full overflow-x-hidden px-4 py-6 lg:py-8">
-            <SidebarTrigger className="-ml-1" />
-            <Separator orientation="vertical" className="mx-2 h-4" />
-            <div className="flex flex-1 items-center justify-between">
-              <div className="flex items-center space-x-2">
+          <div className="w-full px-4 max-w-full">
+            <div className="flex h-14 items-center justify-between">
+              <div className="flex items-center">
+                <SidebarTrigger className="-ml-1" />
+                <Separator orientation="vertical" className="mx-2 h-4" />
                 <h1 className="text-lg font-semibold">Documentation</h1>
-                <Badge variant="secondary" className="hidden sm:inline-flex">
-                  v2.0.0
-                </Badge>
+                <Badge variant="secondary" className="ml-2 hidden sm:inline-flex">v2.0.0</Badge>
               </div>
               <div className="flex items-center space-x-2">
                 <Button variant="ghost" size="icon" asChild>
@@ -60,8 +55,8 @@ export default function HomePage() {
         </header>
 
         <main className="flex-1">
-          <div className="container max-w-screen-2xl px-4 py-6 lg:py-8">
-            <div className="mx-auto max-w-4xl">
+          <div className="w-full max-w-full px-4 py-6 lg:py-8">
+            <div className="mx-auto w-full max-w-4xl">
               {/* Hero Section */}
               <div className="mb-8 space-y-4">
                 <div className="flex items-center space-x-2">
@@ -113,7 +108,6 @@ export default function HomePage() {
                     Pick the components you need. Copy and paste the code into your project and customize to your needs.
                     The code is yours.
                   </p>
-
                   <div className="my-6 w-full overflow-hidden rounded-lg border bg-zinc-950 dark:bg-zinc-900">
                     <div className="flex items-center justify-between px-4 py-2 text-white">
                       <span className="text-sm font-medium">
@@ -150,12 +144,12 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold">Install dependencies</h3>
                   <p className="leading-7">Install the required dependencies for your project:</p>
 
-                  <CodeSnippet
+                  {/* <CodeSnippet
                     code={`npm install @radix-ui/react-slot class-variance-authority clsx tailwind-merge lucide-react
 npm install -D @types/node`}
                     language="bash"
                     title="Terminal"
-                  />
+                  /> */}
 
                   <h3 className="text-xl font-semibold">Add a cn helper</h3>
                   <p className="leading-7">
@@ -188,10 +182,12 @@ export function cn(...inputs: ClassValue[]) {
                   </p>
                 </div>
 
-                <VideoPlayer
-                  title="Getting Started with UI Components"
-                  description="Learn how to set up and use our component library in your Next.js project."
-                />
+                <div className="w-full max-w-full overflow-hidden">
+                  <VideoPlayer
+                    title="Getting Started with UI Components"
+                    description="Learn how to set up and use our component library in your Next.js project."
+                  />
+                </div>
               </section>
 
               {/* Components Preview */}
@@ -201,7 +197,7 @@ export function cn(...inputs: ClassValue[]) {
                   <p className="text-muted-foreground">Over 50+ components built with Radix UI and Tailwind CSS.</p>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
                     { name: "Button", description: "Displays a button or a component that looks like a button." },
                     { name: "Card", description: "Displays a card with header, content, and footer." },

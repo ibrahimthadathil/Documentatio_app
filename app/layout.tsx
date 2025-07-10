@@ -23,13 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <CommandClipboardProvider>
             <SidebarProvider defaultOpen={true}>
-              <div className="flex min-h-screen w-full">
+              <div className="flex min-h-screen  w-full">
                 <AppSidebar />
-                <div className="flex-1 flex">
+                <div className="flex-1 flex-col flex">
                   <PageLoader />
                   {children}
                 </div>
