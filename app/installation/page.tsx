@@ -26,7 +26,7 @@ export default function HomePage() {
     <>
       <SidebarInset
         className={`transition-all duration-300 ease-in-out ${
-          isExpanded ? "mr-80" : "mr-0"
+          isExpanded ? "md:mr-80" : "mr-0"
         }`}
       >
         <ScrollIndicator />

@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <>
     
-      <SidebarInset className={`transition-all duration-300 ease-in-out ${isExpanded ? "md:mr-80" : "mr-0"}`}>
+      <SidebarInset className={`transition-all duration-300 ease-in-out ${isExpanded ? "md:mr-80 " : "mr-0"}`}>
         <ScrollIndicator />
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="w-full px-4 max-w-full">
