@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Check, Copy, Terminal } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
+import { useTheme } from "next-themes"
 
 interface CodeSnippetProps {
   code: string
@@ -19,6 +20,7 @@ export function CodeSnippet({
   showLineNumbers = false,
 }: CodeSnippetProps) {
   const [copied, setCopied] = useState(false)
+  const {theme} = useTheme()
 
   const copyToClipboard = async () => {
     try {
@@ -55,8 +57,8 @@ export function CodeSnippet({
 
   {/* Code Content */}
   <div className="overflow-x-auto max-w-full">
-    <pre className="p-4 text-sm min-w-0 whitespace-pre-wrap break-words">
-      <code className="text-zinc-100 font-mono break-all">
+    <pre className="p-4 text-sm min-w-0 whitespace-pre-wrap break-words ">
+      <code className="text-zinc-700 font-mono break-all">
         {showLineNumbers
           ? code.split("\n").map((line, index) => (
               <div key={index} className="flex flex-wrap sm:flex-nowrap">
