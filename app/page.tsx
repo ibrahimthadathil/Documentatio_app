@@ -18,25 +18,12 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
   const { isExpanded } = useCommandClipboard()
 
-  // useEffect(() => {
-  //   // Simulate page loading
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 1000)
-
-  //   return () => clearTimeout(timer)
-  // }, [])
-
-  // if (isLoading) {
-  //   return null // PageLoader will handle the loading state
-  // }
-
   return (
     <>
       <SidebarInset className={`transition-all duration-300 ease-in-out ${isExpanded ? "mr-80" : "mr-0"}`}>
         <ScrollIndicator />
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container max-w-full overflow-x-hidden px-4 py-6 lg:py-8">
+          <div className="container flex h-14 max-w-screen-2xl items-center px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mx-2 h-4" />
             <div className="flex flex-1 items-center justify-between">

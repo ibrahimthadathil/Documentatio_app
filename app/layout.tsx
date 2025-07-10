@@ -30,7 +30,7 @@ export default function RootLayout({
             <SidebarProvider defaultOpen={true}>
               <div className="flex min-h-screen  w-full">
                 <AppSidebar />
-                <div className="flex-1 flex-col flex">
+                <div className="flex-1 flex">
                   <PageLoader />
                   {children}
                 </div>
