@@ -32,17 +32,17 @@ export function CodeSnippet({
       toast.error("Failed to copy to clipboard")
     }
   }
-
+  
   const isTerminal = language === "bash" || language === "shell"
 
   return (
 
-    <div className="group relative overflow-hidden rounded-lg border bg-zinc-950 dark:bg-zinc-900 w-full max-w-full">
+    <div className="group relative overflow-hidden rounded-lg border bg-gray-100 dark:bg-zinc-900 w-full max-w-full">
   {/* Header */}
-  <div className="flex items-center justify-between border-b border-zinc-800 bg-zinc-900/50 px-4 py-2">
+  <div className={`flex items-center justify-between border-b  px-4 py-2 ${theme==='dark'?"bg-zinc-900/50 border-zinc-800 ":"bg-gray-200 border-zinc-300"}` }>
     <div className="flex items-center gap-2 min-w-0 flex-1">
-      {isTerminal && <Terminal className="h-4 w-4 text-zinc-400 flex-shrink-0" />}
-      <span className="text-sm font-medium text-zinc-300 truncate">{title}</span>
+      {isTerminal && <Terminal className={`"h-4 w-4  ${theme==='dark'?"text-zinc-400":"text-zinc-800"} flex-shrink-0"`} />}
+      <span className={`"text-sm font-medium ${theme==='dark'?"text-zinc-300":"text-zinc-800"}  truncate"`}>{title}</span>
     </div>
     <Button
       variant="ghost"
@@ -57,8 +57,8 @@ export function CodeSnippet({
 
   {/* Code Content */}
   <div className="overflow-x-auto max-w-full">
-    <pre className="p-4 text-sm min-w-0 whitespace-pre-wrap break-words ">
-      <code className="text-zinc-700 font-mono break-all">
+    <pre className={`p-4 text-sm min-w-0 whitespace-pre-wrap break-words  ${theme==='dark'?"":""} `}>
+      <code className={`font-mono ${theme==='dark'?'bg-zinc-800 text-gray-300':' text-gray-700'} break-all`}>
         {showLineNumbers
           ? code.split("\n").map((line, index) => (
               <div key={index} className="flex flex-wrap sm:flex-nowrap">
