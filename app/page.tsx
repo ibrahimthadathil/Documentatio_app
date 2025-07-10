@@ -1,26 +1,30 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { CodeSnippet } from "@/components/code-snippet"
-import { VideoPlayer } from "@/components/video-player"
-import { Pagination } from "@/components/pagination"
-import { ScrollIndicator } from "@/components/scroll-indicator"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Star } from "lucide-react"
-import { CommandClipboard } from "@/components/command-clipboard"
-import { useCommandClipboard } from "@/components/command-clipboard-provider"
+import { useState, useEffect } from "react";
+import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { CodeSnippet } from "@/components/code-snippet";
+import { VideoPlayer } from "@/components/video-player";
+import { Pagination } from "@/components/pagination";
+import { ScrollIndicator } from "@/components/scroll-indicator";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github, Star } from "lucide-react";
+import { CommandClipboard } from "@/components/command-clipboard";
+import { useCommandClipboard } from "@/components/command-clipboard-provider";
 
 export default function HomePage() {
-  const [isLoading, setIsLoading] = useState(true)
-  const { isExpanded } = useCommandClipboard()
+  const [isLoading, setIsLoading] = useState(true);
+  const { isExpanded } = useCommandClipboard();
 
   return (
     <>
-      <SidebarInset className={`transition-all duration-300 ease-in-out ${isExpanded ? "md:mr-80" : "mr-0"}`}>
+      <SidebarInset
+        className={`transition-all duration-300 ease-in-out ${
+          isExpanded ? "md:mr-80" : "mr-0"
+        }`}
+      >
         <ScrollIndicator />
         <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-14 max-w-screen-2xl items-center px-4">
@@ -28,18 +32,20 @@ export default function HomePage() {
             <Separator orientation="vertical" className="mx-2 h-4" />
             <div className="flex flex-1 items-center justify-between">
               <div className="flex items-center space-x-2">
-                <h1 className="text-lg font-semibold">Documentation</h1>
+                <img src="/rol.svg" alt="logo" className="h-20 w-20 " />
+                {/* <p className="text-lg italic -ml-7">Auto<span className="text-[#87BFE5]">XLR8</span></p> */}
+                <h1 className="text-lg font-semibold md:ps-3">Documentation</h1>
                 <Badge variant="secondary" className="hidden sm:inline-flex">
                   v2.0.0
                 </Badge>
               </div>
               <div className="flex items-center space-x-2">
-                <Button variant="ghost" size="icon" asChild>
+                {/* <Button variant="ghost" size="icon" asChild>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     <span className="sr-only">GitHub</span>
                   </a>
-                </Button>
+                </Button> */}
                 <ThemeToggle />
               </div>
             </div>
@@ -56,14 +62,15 @@ export default function HomePage() {
                     <Star className="mr-1 h-3 w-3" />
                     New
                   </Badge>
-                  <span className="text-sm text-muted-foreground">Version 2.0 is now available</span>
+                  <span className="text-sm text-muted-foreground">
+                    Version 2.0 is now available
+                  </span>
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-                  Build beautiful apps with our UI components
+                  Streamlining Complexity, Accelerating Results.
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable.
-                  Open Source.
+                  Our innovative solutions simplify complex processes, enabling your organization to achieve faster, more reliable outcomes.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Button size="lg" asChild>
@@ -73,7 +80,11 @@ export default function HomePage() {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="mr-2 h-4 w-4" />
                       View on GitHub
                     </a>
@@ -83,39 +94,67 @@ export default function HomePage() {
 
               {/* Introduction */}
               <section className="mb-12 space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tight">Introduction</h2>
+                <div className="space-y-2" >
+                  <h2 className="text-3xl font-bold tracking-tight">
+                    Introduction
+                  </h2>
                   <p className="text-muted-foreground">
-                    This is not a component library. It's a collection of re-usable components that you can copy and
-                    paste into your apps.
+                    This is not a component library. It's a collection of
+                    re-usable components that you can copy and paste into your
+                    apps.
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold">What do you mean by not a component library?</h3>
+                {/* <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">
+                    What do you mean by not a component library?
+                  </h3>
                   <p className="leading-7">
-                    I mean you do not install it as a dependency. It is not available or distributed via npm.
+                    I mean you do not install it as a dependency. It is not
+                    available or distributed via npm.
                   </p>
                   <p className="leading-7">
-                    Pick the components you need. Copy and paste the code into your project and customize to your needs.
-                    The code is yours.
+                    Pick the components you need. Copy and paste the code into
+                    your project and customize to your needs. The code is yours.
                   </p>
 
                   <div className="my-6 w-full overflow-hidden rounded-lg border bg-zinc-950 dark:bg-zinc-900">
                     <div className="flex items-center justify-between px-4 py-2 text-white">
                       <span className="text-sm font-medium">
-                        Use this as a reference to build your own component system.
+                        Use this as a reference to build your own component
+                        system.
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </section>
+                              {/* Video Tutorial */}
+                <section className="mb-12 space-y-6">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold tracking-tight">
+                      Video Tutorial
+                    </h2>
+                    <p className="text-muted-foreground">
+                      Watch this comprehensive tutorial to get started with our
+                      component library.
+                    </p>
+                  </div>
+
+                  <VideoPlayer
+                    title="Getting Started with UI Components"
+                    description="Learn how to set up and use our component library in your Next.js project."
+                  />
+                </section>
 
               {/* Installation */}
               <section id="installation" className="mb-12 space-y-6">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tight">Installation</h2>
-                  <p className="text-muted-foreground">How to install dependencies and structure your app.</p>
+                  <h2 className="text-3xl font-bold tracking-tight">
+                    Installation
+                  </h2>
+                  <p className="text-muted-foreground">
+                    How to install dependencies and structure your app.
+                  </p>
                 </div>
 
                 <div className="space-y-4">
@@ -134,8 +173,12 @@ export default function HomePage() {
                     title="Terminal"
                   />
 
-                  <h3 className="text-xl font-semibold">Install dependencies</h3>
-                  <p className="leading-7">Install the required dependencies for your project:</p>
+                  <h3 className="text-xl font-semibold">
+                    Install dependencies
+                  </h3>
+                  <p className="leading-7">
+                    Install the required dependencies for your project:
+                  </p>
 
                   <CodeSnippet
                     code={`npm install @radix-ui/react-slot class-variance-authority clsx tailwind-merge lucide-react
@@ -150,7 +193,8 @@ npm install -D @types/node`}
                     <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
                       cn
                     </code>{" "}
-                    helper to make it easier to conditionally add Tailwind CSS classes:
+                    helper to make it easier to conditionally add Tailwind CSS
+                    classes:
                   </p>
 
                   <CodeSnippet
@@ -166,42 +210,51 @@ export function cn(...inputs: ClassValue[]) {
                 </div>
               </section>
 
-              {/* Video Tutorial */}
-              <section className="mb-12 space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tight">Video Tutorial</h2>
-                  <p className="text-muted-foreground">
-                    Watch this comprehensive tutorial to get started with our component library.
-                  </p>
-                </div>
 
-                <VideoPlayer
-                  title="Getting Started with UI Components"
-                  description="Learn how to set up and use our component library in your Next.js project."
-                />
-              </section>
 
               {/* Components Preview */}
-              <section className="mb-12 space-y-6">
+              {/* <section className="mb-12 space-y-6">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tight">Components</h2>
-                  <p className="text-muted-foreground">Over 50+ components built with Radix UI and Tailwind CSS.</p>
+                  <h2 className="text-3xl font-bold tracking-tight">
+                    Components
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Over 50+ components built with Radix UI and Tailwind CSS.
+                  </p>
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {[
-                    { name: "Button", description: "Displays a button or a component that looks like a button." },
-                    { name: "Card", description: "Displays a card with header, content, and footer." },
+                    {
+                      name: "Button",
+                      description:
+                        "Displays a button or a component that looks like a button.",
+                    },
+                    {
+                      name: "Card",
+                      description:
+                        "Displays a card with header, content, and footer.",
+                    },
                     {
                       name: "Dialog",
-                      description: "A window overlaid on either the primary window or another dialog window.",
+                      description:
+                        "A window overlaid on either the primary window or another dialog window.",
                     },
                     {
                       name: "Input",
-                      description: "Displays a form input field or a component that looks like an input field.",
+                      description:
+                        "Displays a form input field or a component that looks like an input field.",
                     },
-                    { name: "Select", description: "Displays a list of options for the user to pick from." },
-                    { name: "Table", description: "A responsive table component with sorting and filtering." },
+                    {
+                      name: "Select",
+                      description:
+                        "Displays a list of options for the user to pick from.",
+                    },
+                    {
+                      name: "Table",
+                      description:
+                        "A responsive table component with sorting and filtering.",
+                    },
                   ].map((component) => (
                     <div
                       key={component.name}
@@ -209,41 +262,54 @@ export function cn(...inputs: ClassValue[]) {
                     >
                       <div className="space-y-2">
                         <h3 className="font-semibold">{component.name}</h3>
-                        <p className="text-sm text-muted-foreground">{component.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {component.description}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
-              </section>
+              </section> */}
 
-              {/* FAQ */}
+              {/* FAQ
               <section className="mb-12 space-y-6">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
-                  <p className="text-muted-foreground">Common questions about using our component library.</p>
+                  <h2 className="text-3xl font-bold tracking-tight">
+                    Frequently Asked Questions
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Common questions about using our component library.
+                  </p>
                 </div>
 
                 <div className="space-y-4">
                   <div className="rounded-lg border p-4">
-                    <h3 className="font-semibold mb-2">Can I use this in my project?</h3>
+                    <h3 className="font-semibold mb-2">
+                      Can I use this in my project?
+                    </h3>
                     <p className="text-sm text-muted-foreground">
-                      Yes. Free to use for personal and commercial projects. No attribution required.
+                      Yes. Free to use for personal and commercial projects. No
+                      attribution required.
                     </p>
                   </div>
                   <div className="rounded-lg border p-4">
-                    <h3 className="font-semibold mb-2">Do you provide Figma files?</h3>
+                    <h3 className="font-semibold mb-2">
+                      Do you provide Figma files?
+                    </h3>
                     <p className="text-sm text-muted-foreground">
-                      Yes! We provide Figma files for all components. You can find them in our design system.
+                      Yes! We provide Figma files for all components. You can
+                      find them in our design system.
                     </p>
                   </div>
                   <div className="rounded-lg border p-4">
                     <h3 className="font-semibold mb-2">Can I contribute?</h3>
                     <p className="text-sm text-muted-foreground">
-                      We welcome contributions. Check out our contributing guide on GitHub.
+                      We welcome contributions. Check out our contributing guide
+                      on GitHub.
                     </p>
                   </div>
                 </div>
-              </section>
+              </section> */}
 
               {/* Pagination */}
               <Pagination
@@ -260,5 +326,5 @@ export function cn(...inputs: ClassValue[]) {
       </SidebarInset>
       <CommandClipboard />
     </>
-  )
+  );
 }

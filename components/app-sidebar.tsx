@@ -234,7 +234,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
               <div className="flex md:justify-start justify-center align-items-center ">
               <img src="/logo.png" alt="Logo" className="w-20 h-20 " />
-              <h6 className={`-ml-4  font-extrabold text-3xl pt-5 ${theme=='dark'?"text-gray-100":"text-zinc-600"}`}>Velocity</h6>
+              <h6 className={`-ml-4  font-extrabold text-3xl pt-5 ${theme=='dark'?"!text-gray-100":"text-zinc-800"}`}>Velocity</h6>
               </div>
 
           </SidebarMenuItem>
