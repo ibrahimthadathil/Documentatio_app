@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Github, Star } from "lucide-react"
 import { CommandClipboard } from "@/components/command-clipboard"
 import { useCommandClipboard } from "@/components/command-clipboard-provider"
-
+import logo from "@/public/yy.svg"
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
   const { isExpanded } = useCommandClipboard()
@@ -38,6 +38,8 @@ export default function HomePage() {
               <div className="flex items-center">
                 <SidebarTrigger className="-ml-1" />
                 <Separator orientation="vertical" className="mx-2 h-4" />
+                <img src="/yy.svg" alt="Logo" className="w-8 h-8" />
+
                 <h1 className="text-lg font-semibold">Documentation</h1>
                 <Badge variant="secondary" className="ml-2 hidden sm:inline-flex">v2.0.0</Badge>
               </div>
