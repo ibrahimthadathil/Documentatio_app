@@ -14,10 +14,12 @@ import { ExternalLink, Github, Star } from "lucide-react";
 import { CommandClipboard } from "@/components/command-clipboard";
 import { useCommandClipboard } from "@/components/command-clipboard-provider";
 import SVGComponent from "@/components/icons/logo";
-
+import SVGLabel from "@/components/icons/label";
+import { useTheme } from "next-themes";
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   const { isExpanded } = useCommandClipboard();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -32,20 +34,20 @@ export default function HomePage() {
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mx-2 h-4" />
             <div className="flex flex-1 items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <SVGComponent color='#5b4bae'/>
+              <div className="flex items-center">
+                <SVGComponent color="#87BFE5" size="16" className="" />
+                <SVGLabel
+                  color="red"
+                  className="mt-2"
+                  theme={theme == "dark" ? "white" : "black"}
+                />
+
                 <h1 className="text-lg font-semibold md:ps-3">Documentation</h1>
                 <Badge variant="secondary" className="hidden sm:inline-flex">
                   v2.0.0
                 </Badge>
               </div>
               <div className="flex items-center space-x-2">
-                {/* <Button variant="ghost" size="icon" asChild>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4" />
-                    <span className="sr-only">GitHub</span>
-                  </a>
-                </Button> */}
                 <ThemeToggle />
               </div>
             </div>
@@ -56,45 +58,59 @@ export default function HomePage() {
           <div className="container max-w-screen-2xl px-4 py-6 lg:py-8">
             <div className="mx-auto max-w-4xl">
               {/* Hero Section */}
-              <div className="mb-8 space-y-4">
+              <div className="mb-8 space-y-4 ">
+                {/* Top Badge */}
                 <div className="flex items-center space-x-2">
                   <Badge variant="outline" className="bg-primary/10">
                     <Star className="mr-1 h-3 w-3" />
                     New
                   </Badge>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-xs sm:text-sm text-muted-foreground">
                     Version 2.0 is now available
                   </span>
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-                  Streamlining Complexity, Accelerating Results.
-                </h1>
-                <p className="text-xl text-muted-foreground">
-                  Our innovative solutions simplify complex processes, enabling your organization to achieve faster, more reliable outcomes.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Button size="lg" asChild>
-                    <a href="#installation">
-                      Get Started
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </div>
+
+                {/* Bounded Section */}
               </div>
+                <div
+                  className={`shadow ${
+                    theme == "dark"
+                      ? "bg-zinc-900 text-gray-300"
+                      : "bg-gray-50 text-zinc-900 shadow-inner"
+                  } rounded-xl sm:rounded-2xl mb-5 min-h-[300px]  sm:min-h-[400px] md:max-h-[650px] h-auto flex flex-col items-center justify-center p-3 sm:p-6 md:p-14 text-center mx-6 sm:mx-6 md:mx-0`}
+                >
+                  {/* Logo */}
+                  <div className="mb-2 sm:mb-4 md:mb-2">
+                    <div className="flex items-center h-[50px] sm:h-[70px] md:h-[100px]">
+                      <SVGComponent 
+                        color="#87BFE5" 
+                        size="32" 
+                        className="sm:size-10 md:size-14" 
+                      />
+                      <SVGLabel
+                        color="red"
+                        className="mt-2 sm:mt-3 md:mt-5"
+                        size={120}
+                        theme={theme == "dark" ? "white" : "black"}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="max-w-[280px] sm:max-w-md md:max-w-2xl text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed">
+                    <span className="font-semibold">AutoXLR8</span>, a purpose
+                    built automated testing suite for the buy-side community,
+                    simplifies the end-to-end testing process. Our approach
+                    helps clients improve data management, simulate actual
+                    business activities, and incorporate testing earlier in
+                    their projects, reducing data discrepancies and resource
+                    demands.
+                  </p>
+                </div>
 
               {/* Introduction */}
-              <section className="mb-12 space-y-6">
-                <div className="space-y-2" >
+              {/* <section className="mb-12 space-y-6"> */}
+                {/* <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tight">
                     Introduction
                   </h2>
@@ -103,7 +119,7 @@ export default function HomePage() {
                     re-usable components that you can copy and paste into your
                     apps.
                   </p>
-                </div>
+                </div> */}
 
                 {/* <div className="space-y-4">
                   <h3 className="text-xl font-semibold">
@@ -127,24 +143,24 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div> */}
-              </section>
-                              {/* Video Tutorial */}
-                <section className="mb-12 space-y-6">
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-bold tracking-tight">
-                      Video Tutorial
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Watch this comprehensive tutorial to get started with our
-                      component library.
-                    </p>
-                  </div>
+              {/* </section> */}
+              {/* Video Tutorial */}
+              <section className="mb-12 space-y-6">
+                <div className="space-y-2">
+                  <h2 className="text-3xl font-bold tracking-tight">
+                    Video Tutorial
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Watch this comprehensive tutorial to get started with our
+                    component library.
+                  </p>
+                </div>
 
-                  <VideoPlayer
-                    title="Getting Started with UI Components"
-                    description="Learn how to set up and use our component library in your Next.js project."
-                  />
-                </section>
+                <VideoPlayer
+                  title="Getting Started with UI Components"
+                  description="Learn how to set up and use our component library in your Next.js project."
+                />
+              </section>
 
               {/* Installation */}
               <section id="installation" className="mb-12 space-y-6">
@@ -209,8 +225,6 @@ export function cn(...inputs: ClassValue[]) {
                   />
                 </div>
               </section>
-
-
 
               {/* Components Preview */}
               {/* <section className="mb-12 space-y-6">

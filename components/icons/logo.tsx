@@ -1,10 +1,10 @@
 import * as React from "react";
-const SVGComponent = (props:{color:string,className?:string}) => (
+const SVGComponent = (props:{color:string,className?:string,size?:string}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 43 40"
-    width={40}
-    height={30}
+    width={props.size ? props.size:40}
+    height={props.size ? props.size:30}
     {...props}
   >
     <title>{"yy"}</title>

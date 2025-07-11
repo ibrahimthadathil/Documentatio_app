@@ -48,10 +48,10 @@ const data = {
           title: "Introduction",
           url: "#",
         },
-        // {
-        //   title: "Installation",
-        //   url: "installation",
-        // },
+        {
+          title: "Installation",
+          url: "#installation",
+        },
         // {
         //   title: "Theming",
         //   url: "#",
@@ -235,7 +235,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
               <div className="flex md:justify-start justify-center align-items-center p-2 rounded-lg">
-                <SVGComponent color='#87BFE5' className="mt-2 ms-10"/>
+                <SVGComponent color='#87BFE5' className="mt-2 ms-8" />
                 <SVGtext color={`${theme=='dark'?'#ffff':'#252626'}`} className="-ml-6 " />
               </div>
 
