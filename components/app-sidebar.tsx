@@ -28,6 +28,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { useTheme } from "next-themes";
+import SVGtext from "@/components/icons/logoText";
+import SVGComponent from "@/components/icons/logo"
 
 const data = {
   user: {
@@ -232,9 +234,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-              <div className="flex md:justify-start justify-center align-items-center ">
-              <img src="/logo.png" alt="Logo" className="w-20 h-20 " />
-              <h6 className={`-ml-4  font-extrabold text-3xl pt-5 ${theme=='dark'?"!text-gray-100":"text-zinc-800"}`}>Velocity</h6>
+              <div className="flex md:justify-start justify-center align-items-center p-2 rounded-lg">
+                <SVGComponent color='#87BFE5' className="mt-2 ms-10"/>
+                <SVGtext color={`${theme=='dark'?'#ffff':'#252626'}`} className="-ml-6 " />
               </div>
 
           </SidebarMenuItem>

@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Star } from "lucide-react";
 import { CommandClipboard } from "@/components/command-clipboard";
 import { useCommandClipboard } from "@/components/command-clipboard-provider";
+import SVGComponent from "@/components/icons/logo";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,8 +33,7 @@ export default function HomePage() {
             <Separator orientation="vertical" className="mx-2 h-4" />
             <div className="flex flex-1 items-center justify-between">
               <div className="flex items-center space-x-2">
-                <img src="/rol.svg" alt="logo" className="h-20 w-20 " />
-                {/* <p className="text-lg italic -ml-7">Auto<span className="text-[#87BFE5]">XLR8</span></p> */}
+                <SVGComponent color='#5b4bae'/>
                 <h1 className="text-lg font-semibold md:ps-3">Documentation</h1>
                 <Badge variant="secondary" className="hidden sm:inline-flex">
                   v2.0.0

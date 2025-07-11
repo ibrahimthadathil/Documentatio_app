@@ -88,7 +88,7 @@ export function VideoPlayer({ title, description }: VideoPlayerProps) {
       {/* Video Wrapper */}
       <div
         ref={wrapperRef}
-        className="relative overflow-hidden w-full h-[500px] rounded-lg bg-black"
+        className="relative overflow-hidden w-full md:h-[500px]  rounded-lg bg-black"
       >
         {/* Fullscreen Button */}
         <div className="absolute top-2 left-2 z-10">
