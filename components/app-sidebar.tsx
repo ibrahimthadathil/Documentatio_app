@@ -48,95 +48,26 @@ const data = {
           title: "Introduction",
           url: "#",
         },
-        {
-          title: "Installation",
-          url: "#installation",
-        },
-        // {
-        //   title: "Theming",
-        //   url: "#",
-        // },
-        // {
-        //   title: "Dark Mode",
-        //   url: "#",
-        // },
-        // {
-        //   title: "CLI",
-        //   url: "#",
-        // },
+
       ],
     },
-    // {
-    //   title: "Components",
-    //   url: "#",
-    //   icon: Package,
-    //   items: [
-    //     {
-    //       title: "Accordion",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Alert",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Avatar",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Badge",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Button",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Calendar",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Card",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Checkbox",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Dialog",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Dropdown Menu",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Form",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Input",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Select",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Table",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tabs",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Toast",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Installation",
+      url: "/installation",
+      icon: Package,
+      items: [
+        {
+          title: "API and website ",
+          url: "/installation/api",
+        },
+        {
+          title: "Windows Service ",
+          url: "/installation/windows-service",
+        },
+        
+ 
+      ],
+    },
     // {
     //   title: "Layout",
     //   url: "#",
