@@ -88,7 +88,7 @@ export function CommandClipboard() {
         <Button
           variant="outline"
           size="icon"
-          className="h-10 w-10 rounded-full bg-background shadow-lg hover:shadow-xl transition-all duration-200 border-2"
+          className="h-10 w-10 rounded-full bg-background hover:shadow-xl transition-all duration-200 border-2"
           onClick={toggleExpanded}
         >
           {isExpanded ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -105,15 +105,13 @@ export function CommandClipboard() {
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="flex items-center justify-between p-4">
+            <div className="flex items-center justify-between p-[14px] ">
               <div className="flex items-center gap-2">
                 <Terminal className="h-5 w-5 text-primary" />
                 <h2 className="text-lg font-semibold">Command Clipboard</h2>
               </div>
             </div>
-            <div className="px-4 pb-4">
-              <p className="text-sm text-muted-foreground">Quick setup commands for your project</p>
-            </div>
+            
           </div>
 
           {/* Content */}
