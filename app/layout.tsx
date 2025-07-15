@@ -28,9 +28,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <CommandClipboardProvider>
             <SidebarProvider defaultOpen={true}>
-              <div className="flex min-h-screen  w-full">
+              <div className="flex min-h-screen  w-full ">
                 <AppSidebar />
-                <div className="flex-1 flex">
+                <div className="flex-1 flex ">
                   <PageLoader />
                   {children}
                 </div>

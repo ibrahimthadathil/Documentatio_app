@@ -161,12 +161,12 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const {theme} = useTheme()
   return (
-    <Sidebar variant="inset" {...props}>
+    <Sidebar variant="inset" {...props} className={`border-e ${theme=='dark'?"border-gray-900":"border-gray-100"} `}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-              <div className="flex md:justify-start justify-center align-items-center p-2 rounded-lg">
-                <SVGComponent color='#87BFE5' className="mt-2 ms-8" />
+              <div className="flex md:justify-start  justify-center align-items-center p-2 rounded-lg">
+                <SVGComponent color='#87BFE5' className="mt-2 ms-8 " />
                 <SVGtext color={`${theme=='dark'?'#ffff':'#252626'}`} className="-ml-6 " />
               </div>
 

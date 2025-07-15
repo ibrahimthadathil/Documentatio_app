@@ -1,4 +1,5 @@
 "use client";
+
 import { CommandClipboard } from "@/components/command-clipboard";
 import { useCommandClipboard } from "@/components/command-clipboard-provider";
 import SVGComponent from "@/components/icons/logo";
@@ -6,14 +7,20 @@ import { ScrollIndicator } from "@/components/scroll-indicator";
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 import SVGLabel from "@/components/icons/label";
-
-import React from "react";
 import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Pagination } from "@/components/pagination";
+import React from "react";
 
-const page = () => {
+interface SidebarContentLayoutProps {
+  children: React.ReactNode;
+  title?: string;
+}
+
+export const SidebarContentLayout = ({
+  children,
+  title = "Documentation",
+}: SidebarContentLayoutProps) => {
   const { isExpanded } = useCommandClipboard();
   const { theme } = useTheme();
 
@@ -31,14 +38,13 @@ const page = () => {
             <Separator orientation="vertical" className="mx-2 h-4" />
             <div className="flex flex-1 items-center justify-between">
               <div className="flex items-center">
-                <SVGComponent color="#87BFE5" size="16" className="" />
+                <SVGComponent color="#87BFE5" size="16" />
                 <SVGLabel
                   color="red"
                   className="mt-2"
-                  theme={theme == "dark" ? "white" : "black"}
+                  theme={theme === "dark" ? "white" : "black"}
                 />
-
-                <h1 className="text-lg font-semibold md:ps-3">Documentation</h1>
+                <h1 className="text-lg font-semibold md:ps-3">{title}</h1>
                 <Badge variant="secondary" className="hidden sm:inline-flex">
                   v2.0.0
                 </Badge>
@@ -52,23 +58,12 @@ const page = () => {
 
         <main className="flex-1">
           <div className="w-full max-w-full px-4 py-6 lg:py-8">
-            <div className="mx-auto w-full max-w-4xl">
-              
-              <Pagination
-                currentPage={1}
-                totalPages={5}
-                previousLabel="Welcome"
-                nextLabel="Installation Guide"
-                previousHref="#"
-                nextHref="#installation"
-              />
-            </div>
+            <div className="mx-auto w-full max-w-4xl">{children}</div>
           </div>
         </main>
       </SidebarInset>
+
       <CommandClipboard />
     </>
   );
 };
-
-export default page;

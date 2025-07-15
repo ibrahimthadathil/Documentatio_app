@@ -17,7 +17,6 @@ import SVGComponent from "@/components/icons/logo";
 import SVGLabel from "@/components/icons/label";
 import { useTheme } from "next-themes";
 export default function HomePage() {
-  const [isLoading, setIsLoading] = useState(true);
   const { isExpanded } = useCommandClipboard();
   const { theme } = useTheme();
 
