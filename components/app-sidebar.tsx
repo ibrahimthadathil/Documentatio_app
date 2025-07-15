@@ -40,13 +40,13 @@ const data = {
   navMain: [
     {
       title: "Getting Started",
-      url: "#",
+      url: "/",
       icon: BookOpen,
       isActive: true,
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/",
         },
 
       ],
@@ -161,7 +161,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const {theme} = useTheme()
   return (
-    <Sidebar variant="inset" {...props} className={`border-e bg-red-500 ${theme=='dark'?" border-gray-900":"border-gray-100"} `}>
+    <Sidebar variant="inset" {...props} className={`border-e${theme=='dark'?" border-gray-900":"border-gray-100"} `}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
