@@ -14,8 +14,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Pagination } from "@/components/pagination";
 import { CodeSnippet } from "@/components/code-snippet";
 import { VideoPlayer } from "@/components/video-player";
-import { Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import { SidebarContentLayout } from "@/components/layouts/dashboardLayout";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const page = () => {
   const { isExpanded } = useCommandClipboard();
@@ -38,6 +40,27 @@ const page = () => {
                   Version 2.0 is now available
                 </span>
               </div>
+             <div className=" top-0 justify-end right-0 flex space-x-2">
+                  <Link href="/installation/api">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Previous page"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                    </Button>
+                  </Link>
+
+                  <Link href="/">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Next page"
+                    >
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
             </div>
             {/* Video Tutorial */}
             <section className="mb-12 space-y-6">

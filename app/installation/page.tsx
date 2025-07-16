@@ -9,9 +9,10 @@ import { VideoPlayer } from "@/components/video-player";
 import { Pagination } from "@/components/pagination";
 import { ScrollIndicator } from "@/components/scroll-indicator";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Github, Star } from "lucide-react";
 import { CommandClipboard } from "@/components/command-clipboard";
 import { useCommandClipboard } from "@/components/command-clipboard-provider";
+import Link from "next/link";
 
 export default function HomePage() {
 //   const [isLoading, setIsLoading] = useState(true);
@@ -96,6 +97,27 @@ export default function HomePage() {
                       View on GitHub
                     </a>
                   </Button>
+                </div>
+                 <div className=" top-0 justify-end right-0  flex space-x-2">
+                  <Link href="/">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Previous page"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                    </Button>
+                  </Link>
+
+                  <Link href="/">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Next page"
+                    >
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
 

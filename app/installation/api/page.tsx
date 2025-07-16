@@ -3,10 +3,12 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Pagination } from "@/components/pagination";
-import { Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import { VideoPlayer } from "@/components/video-player";
 import { CodeSnippet } from "@/components/code-snippet";
 import { SidebarContentLayout } from "@/components/layouts/dashboardLayout";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
 
@@ -25,9 +27,30 @@ const page = () => {
               Version 2.0 is now available
             </span>
           </div>
+           <div className=" top-0 justify-end right-0  flex space-x-2">
+                  <Link href="/">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Previous page"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                    </Button>
+                  </Link>
+
+                  <Link href="/installation/windows-service">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      aria-label="Next page"
+                    >
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
         </div>
         {/* Video Tutorial */}
-        <section className="mb-12 space-y-6 opacity-75">
+        <section className="mb-12 space-y-6 opacity-85">
           <h2 className="text-3xl font-bold tracking-tight">
             API and Website Installation
           </h2>
