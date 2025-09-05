@@ -28,8 +28,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { useTheme } from "next-themes";
-import SVGtext from "@/components/icons/logoText";
-import SVGComponent from "@/components/icons/logo"
+  import SVGtext from "@/components/icons/logoText";
+  import SVGComponent from "@/components/icons/logo"
 
 const data = {
   user: {
