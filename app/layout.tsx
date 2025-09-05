@@ -27,15 +27,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <CommandClipboardProvider>
-            <SidebarProvider defaultOpen={true}>
-              <div className="flex min-h-screen  w-full ">
-                <AppSidebar />
-                <div className="flex-1 flex ">
-                  <PageLoader />
+           
                   {children}
-                </div>
-              </div>
-            </SidebarProvider>
+                
           </CommandClipboardProvider>
           <Toaster />
         </ThemeProvider>
