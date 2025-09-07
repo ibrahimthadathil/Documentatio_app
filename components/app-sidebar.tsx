@@ -12,6 +12,15 @@ import {
   Package,
   Layout,
   ShapesIcon as Form,
+  File,
+  Icon,
+  Workflow,
+  Library,
+  Link,
+  Link2,
+  ShieldCheck,
+  GitCompare,
+  ArrowLeftRight,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -28,8 +37,9 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { useTheme } from "next-themes";
-  import SVGtext from "@/components/icons/logoText";
-  import SVGComponent from "@/components/icons/logo"
+import SVGtext from "@/components/icons/logoText";
+import SVGComponent from "@/components/icons/logo"
+import { title } from "process";
 
 const data = {
   user: {
@@ -68,94 +78,291 @@ const data = {
  
       ],
     },
-    // {
-    //   title: "Layout",
-    //   url: "#",
-    //   icon: Layout,
-    //   items: [
-    //     {
-    //       title: "Container",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Grid",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Flex",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Sidebar",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Forms",
-    //   url: "#",
-    //   icon: Form,
-    //   items: [
-    //     {
-    //       title: "Form",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Input",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Textarea",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Select",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Checkbox",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Radio Group",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Switch",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
+    {
+      title:'System Definition',
+      url:'/System-Definition',
+     icon: BookOpen,
+     items: [
+      {
+        title:'Key Terminology',
+        url:'#'
+      },
+      {
+        title:'Tool Architecture',
+        url:'#'
+      },
+      {
+        title:"Use Cases and Application",
+        url:'#'
+      },
+     ]
+      
+    },
+    {
+      title: 'Domain Managment',
+      icon: Workflow,
+    url : '#',
+      items:[
+        {
+          title:"Domain Definition",
+          url :'#'
+        },
+        {
+          title: "Domain Configuration",
+          url:'#'
+        },
+        {
+          title:'Domain Audit',
+          url: '#'
+        },
+        {
+          title:'Domain Linkage',
+          url: '#'
+        }
+      ]
+    },
+    {
+      title : "Resources",
+      icon: Library,
+      url:'#'
+      items: [
+        {
+          title : 'Resource Types and Categories',
+          url:'#'
+        },
+        {
+          title : "Resource Configuration",
+          url:'#'
+        },
+        {
+          title:'Aggregated Resources',
+          url :'#'
+        },
+        {
+          title:'Aggregation Methods',
+          url: '#'
+        },
+        {
+          title:'Aggregation Rules',
+          url: '#'
+        },
+        {
+          title:'Additional Resources',
+          url: '#'
+        },
+        {
+          title:'Supplementary Resource Types',
+          url: '#'
+        },
+        {
+          title:'Custom Resource Configuration',
+          url: '#'
+        },
+        
+      ]
+    },
+    {
+      title:'Linked Services',
+      url:'#',
+      icon:Link,
+      items:[
+
+        {
+          title:'Service Integration Overview',
+          url:'#'
+        },
+        {
+          title:'Supported Service Types',
+          url:'#'
+        },
+       
+      ]
+    },
+    {
+      title :'Connection keys',
+      icon : Link2,
+      url: '#',
+      items : [
+        {
+          title: 'Conntection Key Managment',
+          url: '#'
+        },
+      
+      ]
+
+    },
+    {
+      title:'Validation Rules',
+      icon :ShieldCheck,
+      url:'#',
+      items: [
+        {
+          title:'Validation Framework',
+          url:'#'
+        },
+        {
+          title:'Rule Types and Categories',
+          url: '#'
+        },
+        {
+          title:'Creating Custom Validation Rules',
+          url :'#'
+        },
+        {
+          title:'Rules Execution and Scheduling',
+          url:'#'
+        },
+        {
+          title:'validation Results and Reporting',
+          url:'#'
+        }
+      ]
+    },
+    {
+      title:'Comparison Rules',
+      icon:GitCompare,
+      url:'#',
+      items: [
+        {
+          title:'Comparison Engine Overview',
+          url:'#'
+        },
+        {
+          title:"Rule definition And Configuration",
+          url:'#'
+        },
+        {
+          title:'Comparison Strategies',
+          url:'#'
+        },
+        {
+          title:'Rule Precedence and Conflict Resolution',
+          url:'#'
+        },
+        {
+          title:'Comparison Results and Storage',
+          url:'#'
+        },
+
+      ]
+    },
+    {
+      title: "File Processing",
+      url: "#",
+      icon: File,
+      items: [
+        {
+          title:"Supported File Formates",
+          url:"#"
+        },
+        {
+          title:"File Upload and Import",
+          url:"#"
+        },
+        {
+          title:"processing pipelines",
+          url:"#"
+        },
+        {
+          title:"Batch Processing",
+          url:"#"
+        },
+        {
+          title:"Error Handling and Recovery",
+          url:"#"
+        },
+      ],
+
+    },
+    {
+      title: "Comparison Tolerance",
+      url: "#",
+      icon: Layout,
+      items: [
+        {
+          title: "Tolerance Configuration",
+          url: "#",
+        },
+        {
+          title: "Numeric Tolerance Settings",
+          url: "#",
+        },
+        {
+          title: "String and Text Tolerance",
+          url: "#",
+        },
+        {
+          title: "Date/Time Tolerance",
+          url: "#",
+        },
+        {
+          title: "Custom Tolerance Rules",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Research Queries",
+      url: "#",
+      icon: Form,
+      items: [
+        {
+          title: "Query Builder Interface",
+          url: "#",
+        },
+        {
+          title: "Query Syntax and Structure",
+          url: "#",
+        },
+        {
+          title: "Saved Queries and Templates",
+          url: "#",
+        },
+        {
+          title: "Queries Optimisation",
+          url: "#",
+        },
+        {
+          title: "Query Results Export and Visualisation",
+          url: "#",
+        },
+        
+      ],
+    },
+     {
+      title: "Appendices",
+      url: "#",
+      icon: Layout,
+      items: [
+        {
+          title: "Glossary of Terms",
+          url: "#",
+        },
+        {
+          title: "Best Practices Guide",
+          url: "#",
+        },
+        {
+          title: "TrubleShooting Guide",
+          url: "#",
+        },
+        {
+          title: "API Reference",
+          url: "#",
+        },
+        {
+          title: "Release Notes",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title:"Comparison Summery",
+      icon : ArrowLeftRight,
+      url:'#'
+    }
   ],
-  // navSecondary: [
-  //   {
-  //     title: "Support",
-  //     url: "#",
-  //     icon: LifeBuoy,
-  //   },
-  //   {
-  //     title: "Feedback",
-  //     url: "#",
-  //     icon: Send,
-  //   },
-  // ],
-  // projects: [
-  //   {
-  //     name: "Design Engineering",
-  //     url: "#",
-  //     icon: Frame,
-  //   },
-  //   {
-  //     name: "Sales & Marketing",
-  //     url: "#",
-  //     icon: PieChart,
-  //   },
-  //   {
-  //     name: "Travel",
-  //     url: "#",
-  //     icon: Map,
-  //   },
-  // ],
+
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
