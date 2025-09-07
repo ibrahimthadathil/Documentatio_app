@@ -124,7 +124,7 @@ const data = {
     {
       title : "Resources",
       icon: Library,
-      url:'#'
+      url:'#',
       items: [
         {
           title : 'Resource Types and Categories',
