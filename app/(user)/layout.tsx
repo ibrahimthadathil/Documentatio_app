@@ -131,12 +131,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   //   },
   // ],
 };
+
   return (
     <SidebarProvider defaultOpen={true}>
       <div className="flex min-h-screen w-full">
         <AppSidebar />
         <div className="flex-1 flex">
           <PageLoader />
+          
           {children}
         </div>
       </div>

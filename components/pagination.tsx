@@ -22,7 +22,7 @@ export function Pagination({
   const hasNext = currentPage < totalPages
 
   return (
-    <div className="flex items-center justify-between border-t pt-6">
+    <div className="flex items-center justify-between mt-5 border-t pt-6">
       <div className="flex-1">
         {hasPrevious && (
           <Button variant="ghost" asChild className="pl-0">

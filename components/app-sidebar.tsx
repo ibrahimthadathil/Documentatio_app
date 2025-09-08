@@ -85,7 +85,7 @@ const data = {
      items: [
       {
         title:'Key Terminology',
-        url:'#'
+        url:'/System-Definition/key-terminology'
       },
       {
         title:'Tool Architecture',
@@ -101,30 +101,30 @@ const data = {
     {
       title: 'Domain Managment',
       icon: Workflow,
-    url : '#',
+    url : '/domain-managment/definition',
       items:[
         {
           title:"Domain Definition",
-          url :'#'
+          url :'/domain-managment/definition'
         },
         {
           title: "Domain Configuration",
-          url:'#'
+          url:'/domain-managment/configuration'
         },
         {
           title:'Domain Audit',
-          url: '#'
+          url: '/domain-managment/audit'
         },
         {
           title:'Domain Linkage',
-          url: '#'
+          url: '/domain-managment/linkage'
         }
       ]
     },
     {
       title : "Resources",
       icon: Library,
-      url:'#',
+      url:'/resources',
       items: [
         {
           title : 'Resource Types and Categories',
@@ -181,7 +181,7 @@ const data = {
     {
       title :'Connection keys',
       icon : Link2,
-      url: '#',
+      url: '/connection-keys',
       items : [
         {
           title: 'Conntection Key Managment',
@@ -194,54 +194,55 @@ const data = {
     {
       title:'Validation Rules',
       icon :ShieldCheck,
-      url:'#',
+      url:'/validation-rules/framework',
       items: [
         {
           title:'Validation Framework',
-          url:'#'
+          url:'/validation-rules/framework'
         },
         {
           title:'Rule Types and Categories',
-          url: '#'
+          url:'/validation-rules/rule-category'
+          
         },
         {
           title:'Creating Custom Validation Rules',
-          url :'#'
+          url :'/validation-rules/custom-validation'
         },
         {
           title:'Rules Execution and Scheduling',
-          url:'#'
+          url:'/validation-rules/rule-execution'
         },
         {
           title:'validation Results and Reporting',
-          url:'#'
+          url:'/validation-rules/validation-result'
         }
       ]
     },
     {
       title:'Comparison Rules',
       icon:GitCompare,
-      url:'#',
+      url:'/comparison-rules/engine-overview',
       items: [
         {
           title:'Comparison Engine Overview',
-          url:'#'
+          url:'/comparison-rules/engine-overview'
         },
         {
           title:"Rule definition And Configuration",
-          url:'#'
+          url:'/comparison-rules/config'
         },
         {
           title:'Comparison Strategies',
-          url:'#'
+          url:'/comparison-rules/strategies'
         },
         {
           title:'Rule Precedence and Conflict Resolution',
-          url:'#'
+          url:'/comparison-rules/conflict-result'
         },
         {
           title:'Comparison Results and Storage',
-          url:'#'
+          url:'/comparison-rules/result&storage'
         },
 
       ]
@@ -357,9 +358,9 @@ const data = {
       ],
     },
     {
-      title:"Comparison Summery",
+      title:"Comparison Summary",
       icon : ArrowLeftRight,
-      url:'#'
+      url:'/summery'
     }
   ],
 
