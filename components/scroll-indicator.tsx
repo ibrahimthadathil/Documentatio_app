@@ -21,7 +21,7 @@ export function ScrollIndicator() {
   return (
     <div className="fixed top-0 left-0 w-full h-1 bg-muted z-50">
       <div
-        className="h-full bg-primary transition-all duration-150 ease-out"
+        className="h-full bg-primary transition-all duration-1000 ease-out"
         style={{ width: `${scrollProgress * 100}%` }}
       />
     </div>

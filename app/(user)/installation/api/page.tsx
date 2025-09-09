@@ -11,8 +11,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const page = () => {
-
-
   return (
     <>
       <SidebarContentLayout title="Documentation">
@@ -27,27 +25,19 @@ const page = () => {
               Version 2.0 is now available
             </span>
           </div>
-           <div className=" top-0 justify-end right-0  flex space-x-2">
-                  <Link href="/">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      aria-label="Previous page"
-                    >
-                      <ArrowLeft className="h-4 w-4" />
-                    </Button>
-                  </Link>
+          <div className=" top-0 justify-end right-0  flex space-x-2">
+            <Link href="/">
+              <Button variant="outline" size="icon" aria-label="Previous page">
+                <ArrowLeft className="h-4 w-4" />
+              </Button>
+            </Link>
 
-                  <Link href="/installation/windows-service">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      aria-label="Next page"
-                    >
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
+            <Link href="/installation/windows-service">
+              <Button variant="outline" size="icon" aria-label="Next page">
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
         {/* Video Tutorial */}
         <section className="mb-12 space-y-6 opacity-85">
