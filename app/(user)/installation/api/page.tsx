@@ -9,11 +9,13 @@ import { CodeSnippet } from "@/components/code-snippet";
 import { SidebarContentLayout } from "@/components/layouts/dashboardLayout";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Wrapper from '@/app/(user)/user-layout'
+import { CommandClipboard } from "@/components/command-clipboard";
 
 const page = () => {
   return (
     <>
-      <SidebarContentLayout title="Documentation">
+      <Wrapper commandClipboard={<CommandClipboard/>}>
         {/* Hero section */}
         <div className="mb-8 space-y-4">
           <div className="flex items-center space-x-2">
@@ -129,7 +131,8 @@ const page = () => {
           previousHref="#"
           nextHref="#installation"
         />
-      </SidebarContentLayout>
+        </Wrapper>
+      
     </>
   );
 };

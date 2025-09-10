@@ -10,6 +10,7 @@ export default function HomePage() {
       <Wrapper commandClipboard={<CommandClipboard />}>
         {/* Content Section */}
         {/* Content Section */}
+        
         <div className="space-y-6">
           <h2 className="text-xl font-semibold">Domain Linkage</h2>
           <p className="text-muted-foreground max-w-2xl">

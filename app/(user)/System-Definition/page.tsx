@@ -55,153 +55,116 @@ export default function HomePage() {
 
         {/* What the system enables */}
         <div className="space-y-8 mb-8">
-          <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">
-              The system enables organizations to:
-            </h2>
-            <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Integrate with multiple data sources through Linked Services
-                (e.g., local files, SFTP, SQL, Azure SQL)
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Define Domains to standardize data structures, column types, and
-                formats
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Configure Resources by mapping actual data files to domain
-                definitions
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Apply Validation Rules to enforce data integrity, format
-                consistency, and business-specific checks
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Establish Domain Linkages to connect related datasets across
-                systems
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Run Research Queries for extracting, comparing, and analyzing
-                data
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Audit Changes to maintain transparency and track modifications
-                over time
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Generate Reports and Dashboards for validation results,
-                compliance monitoring, and error tracking
-              </li>
-            </ul>
-          </section>
+  <section className="space-y-4">
+    <h2 className="text-xl sm:text-2xl font-bold text-foreground">The system enables organizations to:</h2>
+    <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Integrate with multiple data sources through Linked Services (e.g., local files, SFTP, SQL, Azure SQL)
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Define Domains to standardize data structures, column types, and formats
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Configure Resources by mapping actual data files to domain definitions
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Apply Validation Rules to enforce data integrity, format consistency, and business-specific checks
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Establish Domain Linkages to connect related datasets across systems
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Run Research Queries for extracting, comparing, and analyzing data
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Audit Changes to maintain transparency and track modifications over time
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Generate Reports and Dashboards for validation results, compliance monitoring, and error tracking
+      </li>
+    </ul>
+  </section>
 
-          {/* Core Modules */}
-          <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">
-              Core Modules of the System:
-            </h2>
-            <ol className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  1.
-                </span>
-                <span>
-                  <strong>Domain Management</strong> → Defines the structure and
-                  metadata for datasets
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  2.
-                </span>
-                <span>
-                  <strong>Resource Management</strong> → Maps actual data files
-                  to defined domains
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  3.
-                </span>
-                <span>
-                  <strong>Validation Rules</strong> → Enforces integrity and
-                  business rules on data
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  4.
-                </span>
-                <span>
-                  <strong>Domain Linkage</strong> → Establishes relationships
-                  between domains for cross-checks
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  5.
-                </span>
-                <span>
-                  <strong>Linked Services</strong> → Connects AutoXLR8 to
-                  external data sources
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  6.
-                </span>
-                <span>
-                  <strong>Research Queries</strong> → Provides query building,
-                  execution, and results visualization
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">
-                  7.
-                </span>
-                <span>
-                  <strong>Audit and History</strong> → Tracks domain changes,
-                  rule executions, and validation history
-                </span>
-              </li>
-            </ol>
-          </section>
+  {/* Core Modules */}
+  <section className="space-y-4">
+    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Core Modules of the System:</h2>
+    <ol className="space-y-2 text-sm sm:text-base text-muted-foreground">
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">1.</span>
+        <span>
+          <strong>Domain Management</strong> → Defines the structure and metadata for datasets
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">2.</span>
+        <span>
+          <strong>Resource Management</strong> → Maps actual data files to defined domains
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">3.</span>
+        <span>
+          <strong>Validation Rules</strong> → Enforces integrity and business rules on data
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">4.</span>
+        <span>
+          <strong>Domain Linkage</strong> → Establishes relationships between domains for cross-checks
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">5.</span>
+        <span>
+          <strong>Linked Services</strong> → Connects AutoXLR8 to external data sources
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">6.</span>
+        <span>
+          <strong>Research Queries</strong> → Provides query building, execution, and results visualization
+        </span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary font-semibold mr-2 min-w-[1.5rem]">7.</span>
+        <span>
+          <strong>Audit and History</strong> → Tracks domain changes, rule executions, and validation history
+        </span>
+      </li>
+    </ol>
+  </section>
 
-          {/* Benefits */}
-          <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">
-              Benefits of AutoXLR8:
-            </h2>
-            <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Reduces manual data validation work
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Improves data quality and compliance
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Supports both technical users (SQL, custom validations) and
-                business users (predefined templates, dashboards)
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                Provides transparency with audit trails and consolidated
-                reporting
-              </li>
-            </ul>
-          </section>
-        </div>
+  {/* Benefits */}
+  <section className="space-y-4">
+    <h2 className="text-xl sm:text-2xl font-bold text-foreground">Benefits of AutoXLR8:</h2>
+    <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Reduces manual data validation work
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Improves data quality and compliance
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Supports both technical users (SQL, custom validations) and business users (predefined templates, dashboards)
+      </li>
+      <li className="flex items-start">
+        <span className="text-primary mr-2">•</span>
+        Provides transparency with audit trails and consolidated reporting
+      </li>
+    </ul>
+  </section>
+</div>
 
         {/* Pagination */}
         <Pagination
