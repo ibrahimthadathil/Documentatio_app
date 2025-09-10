@@ -89,11 +89,11 @@ const data = {
       },
       {
         title:'Tool Architecture',
-        url:'#'
+        url:'/System-Definition/tool-architecture'
       },
       {
         title:"Use Cases and Application",
-        url:'#'
+        url:'/System-Definition/use-case'
       },
      ]
       
@@ -128,52 +128,49 @@ const data = {
       items: [
         {
           title : 'Resource Types and Categories',
-          url:'#'
+          url:'/resources/types'
         },
         {
           title : "Resource Configuration",
-          url:'#'
+          url:'/resources/configuration'
         },
         {
           title:'Aggregated Resources',
-          url :'#'
+          url :'/resources/aggregated'
         },
         {
           title:'Aggregation Methods',
-          url: '#'
+          url: '/resources/methods'
         },
-        {
-          title:'Aggregation Rules',
-          url: '#'
-        },
+       
         {
           title:'Additional Resources',
-          url: '#'
+          url: '/resources/additional'
         },
         {
           title:'Supplementary Resource Types',
-          url: '#'
+          url: '/resources/#'
         },
         {
           title:'Custom Resource Configuration',
-          url: '#'
+          url: '/resources/#'
         },
         
       ]
     },
     {
       title:'Linked Services',
-      url:'#',
+      url:'/linked-service',
       icon:Link,
       items:[
 
         {
           title:'Service Integration Overview',
-          url:'#'
+          url:'/linked-service/integration'
         },
         {
           title:'Supported Service Types',
-          url:'#'
+          url:'/linked-service/supported-service'
         },
        
       ]
@@ -185,7 +182,7 @@ const data = {
       items : [
         {
           title: 'Conntection Key Managment',
-          url: '#'
+          url: '/connection-keys/key-managment'
         },
       
       ]
@@ -249,28 +246,25 @@ const data = {
     },
     {
       title: "File Processing",
-      url: "#",
+      url: "/file-processing",
       icon: File,
       items: [
         {
           title:"Supported File Formates",
-          url:"#"
+          url:"/file-processing"
         },
         {
           title:"File Upload and Import",
-          url:"#"
+          url:"/file-processing/upload-import"
         },
         {
           title:"processing pipelines",
-          url:"#"
+          url:"/file-processing/pipelines"
         },
-        {
-          title:"Batch Processing",
-          url:"#"
-        },
+        
         {
           title:"Error Handling and Recovery",
-          url:"#"
+          url:"/file-processing/error-handling"
         },
       ],
 
@@ -332,7 +326,7 @@ const data = {
     },
      {
       title: "Appendices",
-      url: "#",
+      url: "/appendix",
       icon: Layout,
       items: [
         {

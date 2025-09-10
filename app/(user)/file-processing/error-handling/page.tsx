@@ -24,26 +24,34 @@ export default function HomePage() {
         </div>
         {/* {  contents  } */}
         <div className="mx-auto max-w-4xl p-6 space-y-10">
-          {/* Linked Services */}
-          <h2 className="text-2xl font-bold mb-4">Linked Services</h2>
+          {/* Main Heading */}
+          <h2 className="text-2xl font-bold mb-4">
+            Error Handling and Recovery
+          </h2>
           <p className="mb-4">
-            Linked Services allow the Data Tool to connect seamlessly with
-            external platforms, APIs, and data providers. These integrations
-            extend the platform’s capabilities by enabling automated data
-            ingestion, enrichment, and validation workflows across multiple
-            systems.
+            Robust error detection and recovery mechanisms ensure resilience:
           </p>
 
-          <p className="mb-2">
-            By defining Linked Services separately from Resources, you can:
-          </p>
-          <ul className="list-disc list-inside mb-4 space-y-1">
-            <li>Centralize connection logic for external systems.</li>
+          <ul className="list-disc list-inside space-y-2">
             <li>
-              Standardize credentials and endpoints for multiple workflows.
+              <span className="font-bold">Schema Errors:</span> Flag unexpected
+              field changes, missing columns, or invalid layouts.
             </li>
             <li>
-              Streamline the process of pulling or pushing data between systems.
+              <span className="font-bold">Validation Failures:</span> Clearly
+              display rule-level failures for remediation.
+            </li>
+            <li>
+              <span className="font-bold">Partial Processing:</span> Isolate
+              failed files without blocking the rest of the pipeline.
+            </li>
+            <li>
+              <span className="font-bold">Automated Alerts:</span> Notify users
+              of critical failures or schema drift.
+            </li>
+            <li>
+              <span className="font-bold">Recovery Options:</span> Rerun failed
+              loads, replay files, or roll back to a prior state.
             </li>
           </ul>
         </div>

@@ -24,26 +24,37 @@ export default function HomePage() {
         </div>
         {/* {  contents  } */}
         <div className="mx-auto max-w-4xl p-6 space-y-10">
-          {/* Linked Services */}
-          <h2 className="text-2xl font-bold mb-4">Linked Services</h2>
+          {/* Service Integration Overview */}
+          <h2 className="text-2xl font-bold mb-4">
+            Service Integration Overview
+          </h2>
           <p className="mb-4">
-            Linked Services allow the Data Tool to connect seamlessly with
-            external platforms, APIs, and data providers. These integrations
-            extend the platform’s capabilities by enabling automated data
-            ingestion, enrichment, and validation workflows across multiple
-            systems.
+            Service integration provides a framework for securely connecting to
+            upstream and downstream platforms. Each Linked Service acts as a
+            connector that abstracts authentication, protocols, and API calls,
+            allowing end users to focus on configuration rather than
+            connectivity.
           </p>
 
-          <p className="mb-2">
-            By defining Linked Services separately from Resources, you can:
-          </p>
+          <h3 className="text-lg text-pretty font-bold mb-2">Key Features</h3>
           <ul className="list-disc list-inside mb-4 space-y-1">
-            <li>Centralize connection logic for external systems.</li>
             <li>
-              Standardize credentials and endpoints for multiple workflows.
+              <span className="font-bold">Centralized Management:</span> One
+              service connection can be reused by multiple Resources.
             </li>
             <li>
-              Streamline the process of pulling or pushing data between systems.
+              <span className="font-bold">Secure Access:</span> All credentials
+              are encrypted, and access can be restricted by role or
+              environment.
+            </li>
+            <li>
+              <span className="font-bold">Automated Workflows:</span> Enable
+              scheduled data pulls or pushes from/to third-party systems.
+            </li>
+            <li>
+              <span className="font-bold">Scalability:</span> Supports
+              high-frequency integrations for trading, risk, and compliance
+              workflows.
             </li>
           </ul>
         </div>
