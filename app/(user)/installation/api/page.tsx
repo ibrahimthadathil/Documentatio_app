@@ -40,7 +40,7 @@ const page = () => {
               </Button>
             </Link>
           </div>
-        </div>
+        </div> 
         {/* Video Tutorial */}
         <section className="mb-12 space-y-6 opacity-85">
           <h2 className="text-3xl font-bold tracking-tight">

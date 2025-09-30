@@ -32,6 +32,19 @@ export default function HomePage() {
   return (
     <>
     <Wrapper commandClipboard={<CommandClipboard/>}>
+    <div className=" top-0 justify-end right-0  flex space-x-2">
+            <Link href="/validation-rules/rule-category">
+              <Button variant="outline" size="icon" aria-label="Previous page">
+                <ArrowLeft className="h-4 w-4" />
+              </Button>
+            </Link>
+
+            <Link href="/validation-rules/rule-execution">
+              <Button variant="outline" size="icon" aria-label="Next page">
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
 
       {/* Content Section */}
       <div className="space-y-6">

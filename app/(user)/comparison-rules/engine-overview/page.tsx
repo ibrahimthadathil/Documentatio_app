@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
   ArrowRight,
-  ExternalLink,
+  ExternalLink, 
   Github,
   Star,
 } from "lucide-react";
@@ -22,18 +22,26 @@ import Link from "next/link";
 import Wrapper from '@/app/(user)/user-layout'
 
 export default function HomePage() {
-  //   const [isLoading, setIsLoading] = useState(true);
   const { isExpanded } = useCommandClipboard();
 
-  //   if (isLoading) {
-  //     return null; // PageLoader will handle the loading state
-  //   }
 
   return (
     <>
       
         <Wrapper commandClipboard={<CommandClipboard/>}>
+        <div className=" top-0 justify-end right-0  flex space-x-2">
+            <Link href="/validation-rules/validation-result">
+              <Button variant="outline" size="icon" aria-label="Previous page">
+                <ArrowLeft className="h-4 w-4" />
+              </Button>
+            </Link>
 
+            <Link href="/comparison-rules/config">
+              <Button variant="outline" size="icon" aria-label="Next page">
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+        </div>
               {/* Content Section */}
               <div className="space-y-6">
                 <h2 className="text-xl font-semibold">Comparison Rules</h2>
@@ -51,15 +59,15 @@ export default function HomePage() {
                     Comparison Engine Overview
                   </h3>
                   <p className="text-muted-foreground max-w-2xl">
-                    The comparison engine checks that data from multiple systems
+                  The comparison engine checks that data from multiple systems
                     or files matches correctly. It applies rules to align data
                     and identify any differences. These rules may involve
                     adjusting formats, translating values, or comparing combined
                     fields. The engine helps ensure your data is complete and
                     accurate across systems—without changing the original files.
-                  </p>
-                </div>
-              </div>
+                  </p> 
+                </div> 
+            </div>
 
               {/* Pagination */}
               <Pagination

@@ -35,7 +35,7 @@ export default function HomePage() {
               {/* Hero Section */}
               <div className="mb-8 space-y-4 ">
                 {/* Navigation Arrows */}
-
+                
                 {/* Top Badge */}
                 <div className="flex items-center space-x-2">
                   <Badge variant="outline" className="bg-primary/10">
