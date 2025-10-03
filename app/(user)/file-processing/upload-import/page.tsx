@@ -45,9 +45,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Processing Pipeline"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/file-processing/pipelines"
         />
       </Wrapper>
     </>

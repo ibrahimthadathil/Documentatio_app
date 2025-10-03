@@ -52,9 +52,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="File upload and Import"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/file-processing/upload-import"
         />
       </Wrapper>
     </>

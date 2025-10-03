@@ -80,9 +80,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Validation Result"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/validation-rules/validation-result"
         />
       </Wrapper>
     </>

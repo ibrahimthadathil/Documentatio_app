@@ -60,9 +60,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Appendices"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/appendix"
         />
       </Wrapper>
     </>

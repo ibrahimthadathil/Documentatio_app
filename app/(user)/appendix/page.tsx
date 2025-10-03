@@ -332,9 +332,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Comparison Summery"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/summery"
         />
       </Wrapper>
     </>

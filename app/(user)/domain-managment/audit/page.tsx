@@ -77,9 +77,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Domain Linkage"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/domain-managment/linkage"
         />
       </Wrapper>
     </>

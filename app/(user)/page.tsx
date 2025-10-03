@@ -111,7 +111,7 @@ export default function HomePage() {
                 previousLabel="Welcome"
                 nextLabel="Installation Guide"
                 previousHref="#"
-                nextHref="/installation/api"
+                nextHref="/installation"
               />
               </Wrapper>
            

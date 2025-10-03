@@ -309,7 +309,7 @@ export function cn(...inputs: ClassValue[]) {
                 previousLabel="Welcome"
                 nextLabel="Installation Guide"
                 previousHref="#"
-                nextHref="#installation"
+                nextHref="/installation/api"
               />
            </Wrapper>
     </>

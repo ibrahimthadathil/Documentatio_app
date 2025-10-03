@@ -63,9 +63,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
-          previousHref="#"
-          nextHref="#installation"
+          nextLabel="Key Managment"
+          previousHref=""
+          nextHref="/connection-keys/key-managment"
         />
       </Wrapper>
     </>

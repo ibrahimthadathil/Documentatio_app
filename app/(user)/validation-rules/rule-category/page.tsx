@@ -104,9 +104,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Custom Validation"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/validation-rules/custom-validation"
         />
       </Wrapper>
     </>

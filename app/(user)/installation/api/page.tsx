@@ -127,9 +127,9 @@ const page = () => {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Windows service"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/installation/windows-service"
         />
         </Wrapper>
       

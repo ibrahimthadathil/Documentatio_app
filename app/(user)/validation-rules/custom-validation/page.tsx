@@ -97,9 +97,9 @@ export default function HomePage() {
         currentPage={1}
         totalPages={5}
         previousLabel="Welcome"
-        nextLabel="Installation Guide"
+        nextLabel="Rule Execution"
         previousHref="#"
-        nextHref="#installation"
+        nextHref="/validation-rules/rule-execution"
       />
     </Wrapper>
     </>

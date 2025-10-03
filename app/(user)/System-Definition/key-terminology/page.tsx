@@ -29,9 +29,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Tool Architecture"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/System-Definition/tool-architecture"
         />
       </Wrapper>
     </>

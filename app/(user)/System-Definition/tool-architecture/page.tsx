@@ -110,9 +110,9 @@ export default function Architecture() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Use case"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/System-Definition/use-case"
         />
       </Wrapper>
     </>

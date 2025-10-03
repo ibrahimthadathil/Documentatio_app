@@ -90,9 +90,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="File Processing"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/file-processing"
         />
       </Wrapper>
     </>

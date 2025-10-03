@@ -52,9 +52,9 @@ export default function HomePage() {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Integration "
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/linked-service/integration"
         />
       </Wrapper>
     </>
