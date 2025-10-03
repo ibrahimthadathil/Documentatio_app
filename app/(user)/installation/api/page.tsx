@@ -28,7 +28,7 @@ const page = () => {
             </span>
           </div>
           <div className=" top-0 justify-end right-0  flex space-x-2">
-            <Link href="/">
+            <Link href="/installation">
               <Button variant="outline" size="icon" aria-label="Previous page">
                 <ArrowLeft className="h-4 w-4" />
               </Button>

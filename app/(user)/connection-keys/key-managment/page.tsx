@@ -16,7 +16,7 @@ export default function HomePage() {
             </Button>
           </Link>
 
-          <Link href="/validation-rules">
+          <Link href="/validation-rules/framework">
             <Button variant="outline" size="icon" aria-label="Next page">
               <ArrowRight className="h-4 w-4" />
             </Button>

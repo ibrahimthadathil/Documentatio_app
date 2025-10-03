@@ -21,7 +21,7 @@ export default function HomePage() {
               </Button>
             </Link>
 
-            <Link href="/comparison-rules/config-result">
+            <Link href="/comparison-rules/conflict-result">
               <Button variant="outline" size="icon" aria-label="Next page">
                 <ArrowRight className="h-4 w-4" />
               </Button>

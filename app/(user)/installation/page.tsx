@@ -71,7 +71,7 @@ export default function HomePage() {
                     </Button>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="/installation/api">
                     <Button
                       variant="outline"
                       size="icon"

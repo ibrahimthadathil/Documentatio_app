@@ -17,7 +17,7 @@ export default function HomePage() {
               </Button>
             </Link>
 
-            <Link href="/comaparison-rules/engine-overview">
+            <Link href="/comparison-rules/engine-overview">
               <Button variant="outline" size="icon" aria-label="Next page">
                 <ArrowRight className="h-4 w-4" />
               </Button>
