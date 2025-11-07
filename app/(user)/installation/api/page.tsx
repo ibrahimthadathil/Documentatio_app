@@ -28,7 +28,7 @@ const page = () => {
             </span>
           </div>
           <div className=" top-0 justify-end right-0  flex space-x-2">
-            <Link href="/">
+            <Link href="/installation">
               <Button variant="outline" size="icon" aria-label="Previous page">
                 <ArrowLeft className="h-4 w-4" />
               </Button>
@@ -40,7 +40,7 @@ const page = () => {
               </Button>
             </Link>
           </div>
-        </div>
+        </div> 
         {/* Video Tutorial */}
         <section className="mb-12 space-y-6 opacity-85">
           <h2 className="text-3xl font-bold tracking-tight">
@@ -127,9 +127,9 @@ const page = () => {
           currentPage={1}
           totalPages={5}
           previousLabel="Welcome"
-          nextLabel="Installation Guide"
+          nextLabel="Windows service"
           previousHref="#"
-          nextHref="#installation"
+          nextHref="/installation/windows-service"
         />
         </Wrapper>
       
