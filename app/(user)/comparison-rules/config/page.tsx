@@ -1,24 +1,10 @@
 "use client";
-
-import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
-import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { CodeSnippet } from "@/components/code-snippet";
-import { VideoPlayer } from "@/components/video-player";
 import { Pagination } from "@/components/pagination";
-import { ScrollIndicator } from "@/components/scroll-indicator";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowLeft,
-  ArrowRight,
-  ExternalLink,
-  Github,
-  Star,
-} from "lucide-react";
+
 import { CommandClipboard } from "@/components/command-clipboard";
-import { useCommandClipboard } from "@/components/command-clipboard-provider";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import Wrapper from '@/app/(user)/user-layout'
 
 export default function HomePage() {
@@ -29,7 +15,19 @@ export default function HomePage() {
       
       
         <Wrapper commandClipboard={<CommandClipboard/>}>
+    <div className=" top-0 justify-end right-0  flex space-x-2">
+          <Link href="/">
+            <Button variant="outline" size="icon" aria-label="Previous page">
+              <ArrowLeft className="h-4 w-4" />
+            </Button>
+          </Link>
 
+          <Link href="/installation/windows-service">
+            <Button variant="outline" size="icon" aria-label="Next page">
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
               {/* Content Section */}
               <div className="space-y-6">
                 <h2 className="text-xl font-semibold">

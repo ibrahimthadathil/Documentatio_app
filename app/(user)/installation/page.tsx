@@ -26,7 +26,7 @@ export default function HomePage() {
     
               {/* Hero Section */}
               <div className="mb-8 space-y-4">
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <Badge variant="outline" className="bg-primary/10">
                     <Star className="mr-1 h-3 w-3" />
                     New
@@ -34,15 +34,15 @@ export default function HomePage() {
                   <span className="text-sm text-muted-foreground">
                     Version 2.0 is now available
                   </span>
-                </div>
-                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+                </div> */}
+                {/* <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
                   Build beautiful apps with our UI components
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   Beautifully designed components that you can copy and paste
                   into your apps. Accessible. Customizable. Open Source.
-                </p>
-                <div className="flex flex-wrap gap-2">
+                </p> */}
+                {/* <div className="flex flex-wrap gap-2">
                   <Button size="lg" asChild>
                     <a href="#installation">
                       Get Started
@@ -59,7 +59,7 @@ export default function HomePage() {
                       View on GitHub
                     </a>
                   </Button>
-                </div>
+                </div> */}
                  <div className=" top-0 justify-end right-0  flex space-x-2">
                   <Link href="/">
                     <Button
